@@ -1,4 +1,4 @@
-FROM alpine
+FROM ubuntu:latest
 
 MAINTAINER Amit Kumar Jaiswal <amitkumarj441@gmail.com>
 
