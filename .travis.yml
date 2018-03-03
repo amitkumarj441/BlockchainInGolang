@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - "1.10"
+
+script:
+  - CGO_ENABLED=0 go build
+  - docker build --rm -t amitkumarjaiswal/bc .
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - docker push amitkumarjaiswal/bc
